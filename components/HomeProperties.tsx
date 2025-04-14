@@ -1,10 +1,14 @@
 import Link from 'next/link';
-import properties from '@/properties.json';
+import connectDB from '@/config/database';
+import Property from '@/models/Property';
 import PropertyCard from './PropertyCard';
 import { PropertyType } from '@/types';
 
-const HomeProperties = () => {
-    const recentProperties: PropertyType[] = properties.slice(0, 3);
+const HomeProperties = async () => {
+        
+    await connectDB();
+
+    const recentProperties: any[] = await Property.find({}).sort({createdAt: -1}).limit(3).lean();
     
     return (
         <>
