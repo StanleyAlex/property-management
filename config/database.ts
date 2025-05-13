@@ -1,10 +1,10 @@
+'use server';
+
 import mongoose from 'mongoose';
 
 let connected = false;
 
 const connectDB = async() => {
-    mongoose.set('strictQuery', true);
-
     if (connected) {
         console.log('Mongo DB is connected!');
         return;
