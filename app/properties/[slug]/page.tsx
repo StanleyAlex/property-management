@@ -13,7 +13,7 @@ type PropertyParamType = {
 
 const PropertyPage: React.FC<PropertyParamType> = async ({ params }) => {
     await connectDB();
-    const property: PropertyType | null = (await Property.findById(params?.slug).lean()) as unknown as PropertyType;
+    const property: PropertyType | null = (await Property.findById(params?.slug).lean()) as any;
 
     return(<>
         <PropertyHeaderImage image={property?.images[0]} />
