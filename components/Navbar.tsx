@@ -188,6 +188,10 @@ const Navbar: React.FC = () => {
                         role='menuitem'
                         tabIndex={-1}
                         id='user-menu-item-2'
+                        onClick={() => {
+                          setProfileMenuOpen(false);
+                          signOut();
+                        }}
                       >
                         Sign Out
                       </button>
