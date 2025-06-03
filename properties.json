@@ -39,7 +39,7 @@
       "email": "john@gmail.com",
       "phone": "617-555-5555"
     },
-    "images": ["a1.jpg", "a2.jpg", "a3.jpg"],
+    "images": ["https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919674/a1_sgigan.jpg", "https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919675/a2_ha2dys.jpg", "https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919675/a3_oegtma.jpg"],
     "is_featured": false,
     "createdAt": "2024-01-01T00:00:00.000Z",
     "updatedAt": "2024-01-01T00:00:00.000Z"
@@ -83,7 +83,9 @@
       "email": "jane@gmail.com",
       "phone": "212-555-5555"
     },
-    "images": ["b1.jpg", "b2.jpg", "b3.jpg"],
+    "images": ["https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919732/b1_nfozux.jpg",
+      "https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919734/b2_m6mvps.jpg",
+      "https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919735/b3_nhgsea.jpg"],
     "is_featured": false,
     "createdAt": "2024-01-02T00:00:00.000Z",
     "updatedAt": "2024-01-02T00:00:00.000Z"
@@ -129,7 +131,9 @@
       "email": "david@gmail.com",
       "phone": "213-555-5555"
     },
-    "images": ["c1.jpg", "c2.jpg", "c3.jpg"],
+    "images": ["https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919778/c1_ngtoh6.jpg",
+      "https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919779/c2_h4ohzv.jpg",
+      "https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919780/c3_i4z2mk.jpg"],
     "is_featured": false,
     "createdAt": "2024-01-03T00:00:00.000Z",
     "updatedAt": "2024-01-03T00:00:00.000Z"
@@ -163,7 +167,9 @@
       "email": "emily@gmail.com",
       "phone": "512-555-5555"
     },
-    "images": ["d1.jpg", "d2.jpg", "d3.jpg"],
+    "images": ["https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919025/property-mgmt/ospbq1vdimmf0xxewplk.jpg",
+      "https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919025/property-mgmt/uo4cqcwrl9ywrxvplrj4.jpg",
+      "https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919026/property-mgmt/qoeh0krwhtv0gkmkqwek.jpg"],
     "is_featured": false,
     "createdAt": "2024-01-04T00:00:00.000Z",
     "updatedAt": "2024-01-04T00:00:00.000Z"
@@ -199,7 +205,9 @@
       "email": "michael@gmail.com",
       "phone": "312-555-5555"
     },
-    "images": ["e1.jpg", "e2.jpg", "e3.jpg"],
+    "images": ["https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919817/e1_o0uoyy.jpg",
+      "https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919818/e2_hsldt9.jpg",
+      "https://res.cloudinary.com/dcc75eaoc/image/upload/v1748919820/e3_r3qyqa.jpg"],
     "is_featured": true,
     "createdAt": "2024-01-05T00:00:00.000Z",
     "updatedAt": "2024-01-05T00:00:00.000Z"

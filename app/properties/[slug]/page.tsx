@@ -1,6 +1,7 @@
 import React from 'react';
 import PropertyHeaderImage from '@/components/PropertyHeaderImage';
 import PropertyDetails from '@/components/PropertyDetails';
+import PropertyImages from '@/components/PropertyImages';
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
 import { PropertyType } from '@/types';
@@ -34,6 +35,7 @@ const PropertyPage: React.FC<PropertyParamType> = async ({ params }) => {
                 </div>
             </div>
         </section>
+        <PropertyImages images={property?.images} />
     </>);
 }
 
