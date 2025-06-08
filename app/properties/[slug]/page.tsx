@@ -7,14 +7,20 @@ import { FaArrowLeft } from 'react-icons/fa';
 import { PropertyType } from '@/types';
 import connectDB from '@/config/database';
 import Property from '@/models/Property';
+import convertToSerializableObject from '@/utils/convertToSerializableObject';
 
 type PropertyParamType = {
     params: { slug: string };
 }
 
-const PropertyPage: React.FC<PropertyParamType> = async ({ params }) => {
+const PropertyPage = async ({ params }: PropertyParamType) => {
     await connectDB();
-    const property: PropertyType | null = (await Property.findById(params?.slug).lean()) as any;
+    const propertyDoc: PropertyType | null = (await Property.findById(params?.slug).lean()) as any;
+    const property: PropertyType = convertToSerializableObject(propertyDoc);
+
+    if (!property) {
+        return <h1 className='text-center text-2xl font-bold mt-10'>Property Not Found</h1>;
+    }
 
     return(<>
         <PropertyHeaderImage image={property?.images[0]} />
