@@ -1,9 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import "tailwindcss";
 
-@theme extend {
-    --font-sans: var(--font-serif);
-    --font-mono: var(--font-geist-mono);
-    --font-roboto: "Roboto", sans-serif;
-    --grid-cols-70-30: '70% 28%';
+@layer theme {
+    :root {
+        --font-sans: var(--font-serif);
+        --font-mono: var(--font-geist-mono);
+        --font-roboto: "Roboto", sans-serif;
+        --grid-cols-70-30: 70% 30%;
+    }
+
+    .spinner-animation {
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
 }
