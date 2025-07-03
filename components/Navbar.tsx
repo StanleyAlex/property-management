@@ -7,6 +7,7 @@ import {default as NextImage}  from 'next/image';
 import logo from '@/assets/images/logo-white.png';
 import defaultProfile from '@/assets/images/profile.png';
 import { FaGoogle } from 'react-icons/fa';
+import UnreadMessageCount from '@/components/UnreadMessageCount';
 import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 
 const Navbar: React.FC = () => {
@@ -134,9 +135,7 @@ const Navbar: React.FC = () => {
                       />
                     </svg>
                   </button>
-                  <span className='absolute top-0 right-0 inline-flex translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-red-600 px-2 py-1 text-xs leading-none font-bold text-white'>
-                    2{/*<!-- Replace with the actual number of notifications -->*/}
-                  </span>
+                  <UnreadMessageCount />
                 </Link>
                 {/*<!-- Profile dropdown button -->*/}
                 <div className='relative ml-3'>

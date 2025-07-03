@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { GlobalProvider } from '@/context/GlobalContext';
 import AuthProvider from '@/components/AuthProvider';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,16 +16,18 @@ export const metadata = {
 const MainLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
     return (
       <AuthProvider>
-          <html>
-            <body>
-                <Navbar />
-                <main>
-                    {children}
-                </main>
-                <ToastContainer />
-                <Footer />
-            </body>
-        </html>
+        <GlobalProvider>
+            <html>
+                <body>
+                    <Navbar />
+                    <main>
+                        {children}
+                    </main>
+                    <ToastContainer />
+                    <Footer />
+                </body>
+            </html>
+        </GlobalProvider>
       </AuthProvider>)
 }
 
