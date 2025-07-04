@@ -11,6 +11,7 @@ const ProfilePage = async () => {
 
   const sessionUser = await getSessionUser();
 
+  //@ts-ignore
   const { userId } = sessionUser;
 
   if (!userId) {
