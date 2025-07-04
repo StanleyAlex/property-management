@@ -7,14 +7,7 @@ import PropertyCard from '@/components/PropertyCard';
 import PropertySearchForm from '@/components/PropertySearchForm';
 import convertToSerializableObject from '@/utils/convertToSerializableObject';
 
-type SearchParamsType = {
-    searchParams: {
-        location: string;
-        propertyType: string;
-    }
-}
-
-const SearchResultsPage = async ({ searchParams: { location, propertyType } }: SearchParamsType) => {
+const SearchResultsPage = async ({ searchParams: { location, propertyType } }: any) => {
     await connectDB();
 
     const locationPattern: RegExp = new RegExp(location, 'i');
