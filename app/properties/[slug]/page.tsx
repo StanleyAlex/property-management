@@ -12,11 +12,7 @@ import connectDB from '@/config/database';
 import Property from '@/models/Property';
 import convertToSerializableObject from '@/utils/convertToSerializableObject';
 
-type PropertyParamType = {
-    params: { slug: string };
-}
-
-const PropertyPage = async ({ params }: PropertyParamType) => {
+const PropertyPage = async ({ params }: any) => {
     await connectDB();
     const propertyDoc: PropertyType | null = (await Property.findById(params?.slug).lean()) as any;
     const property: PropertyType = convertToSerializableObject(propertyDoc);
